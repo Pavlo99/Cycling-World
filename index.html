@@ -2,104 +2,105 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Вело Світ</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
-  <script src="script.js"></script>
+    <meta charset="utf-8">
+    <title>Вело Світ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <script src="script.js"></script>
 </head>
 
 <body onload="start()">
 
-  <!-- Верхній слот -->
-  <div class="container">
-    <div class="header">
-      <div>
-        <b class="title">ВелоСвіт</b>
-      </div>
-      <nav style="margin-right: 35px;">
-        <a class="navProp" href="#">Розстрочка</a>
-        <a class="navProp" href="#">Ремонт</a>
-        <a class="navProp" href="#">Вибрані</a>
-        <a class="navProp" href="sing.html">Особистий кабінет</a>
-      </nav>
-    </div>
-  </div>
-
-  <!-- Картинка -->
-  <div class="select">
-    <div class="container2">
-      <div class="header" style="margin-left: 2%; margin-right: 2%;">
-        <a class="aproperty" href="#">Велосипеди</a>
-        <a id="demo" class="aproperty" href="#">Запчастини</a>
-        <a class="aproperty" href="#">Аксесуари</a>
-        <a class="aproperty" href="#">Одяг і захист</a>
-      </div>
+    <!-- Верхній слот -->
+    <div class="container">
+        <div class="header">
+            <div>
+                <b class="title">ВелоСвіт</b>
+            </div>
+            <nav style="margin-right: 35px;">
+                <a class="navProp" href="#">Розстрочка</a>
+                <a class="navProp" href="#">Ремонт</a>
+                <a class="navProp" href="#">Вибрані</a>
+                <a class="navProp" href="sing.html">Особистий кабінет</a>
+            </nav>
+        </div>
     </div>
 
-    <img class="imagestyle" src="bike.jpg" alt="">
+    <!-- Картинка -->
+    <div class="select">
+        <div class="container2">
+            <div class="header" style="margin-left: 2%; margin-right: 2%;">
+                <a class="aproperty" href="#">Велосипеди</a>
+                <a id="demo" class="aproperty" href="#">Запчастини</a>
+                <a class="aproperty" href="#">Аксесуари</a>
+                <a class="aproperty" href="#">Одяг і захист</a>
+            </div>
+        </div>
 
-    <div id="myGoods">
-      <b style="margin-left: 2%;">Наш асортимент</b>
-      <b style="margin-right: 2%;">
-        < <b> >
-      </b>
-      </b>
+        <img class="imagestyle" src="bike.jpg" alt="">
+
+        <div id="myGoods">
+            <b style="margin-left: 2%;">Наш асортимент</b>
+            <b style="margin-right: 2%;">
+                < <b> >
+            </b>
+            </b>
+        </div>
+
+        <div id="mymaintable" class="grid-container">
+        </div>
+
     </div>
 
-    <div id="mymaintable" class="grid-container">
+    <!-- Поле вводу -->
+    <div class="add" style="align-items: right;">
+        <div>
+            <h1>Додати</h1>
+        </div>
+        <div style="margin-right: 3%; text-align: right;">
+            <div>
+                <label for="Назва">Назва:</label>
+                <input id="myselectname" class="addinput" type="text" name="name" required>
+            </div>
+            <div>
+                <label for="Рама">Рама:</label>
+                <input class="addinput" type="text" name="type" id="type" required>
+            </div>
+            <div>
+                <label for="Колеса">Колеса:</label>
+                <input class="addinput" type="text" name="wheels" id="wheels" required>
+            </div>
+            <div>
+                <label for="Ціна">Ціна:</label>
+                <input class="addinput" type="text" name="price" id="price" required>
+            </div>
+        </div>
+
+        <div>
+            <label for="country">Країна:</label>
+            <select name="country" style="font-size: 25px;">
+                <option>Виберіть вашу країну</option>
+                <option value="Росія">Росія</option>
+                <option value="Україна">Україна</option>
+                <option value="Білорусь">Білорусь</option>
+                <option value="Польща">Польща</option>
+            </select>
+        </div>
+
+        <button style="font-size: 30px; margin-top: 2%; margin-bottom: 2%;" id="toadd" onclick="add()">Додати</button>
     </div>
 
-  </div>
-
-  <!-- Поле вводу -->
-  <div class="add" style="align-items: right;">
-    <div>
-      <h1>Додати</h1>
+    <!-- Футер -->
+    <div style="margin-top: 3%;">
+        <article>
+            Email: plazyu13@gmail.com
+            <br>Number: +380989307863
+            <br>Adress: Lviv, Bandery, 100
+            <footer>
+                © 2020 Lviv
+            </footer>
+        </article>
     </div>
-    <div style="margin-right: 3%; text-align: right;">
-      <div>
-        <label for="Назва">Назва:</label>
-        <input id="myselectname" class="addinput" type="text" name="name" required>
-      </div>
-      <div>
-        <label for="Рама">Рама:</label>
-        <input class="addinput" type="text" name="type" id="type" required>
-      </div>
-      <div>
-        <label for="Колеса">Колеса:</label>
-        <input class="addinput" type="text" name="wheels" id="wheels" required>
-      </div>
-      <div>
-        <label for="Ціна">Ціна:</label>
-        <input class="addinput" type="text" name="price" id="price" required>
-      </div>
-    </div>
-
-    <div>
-      <label for="country">Країна:</label>
-      <select name="country" style="font-size: 25px;">
-        <option>Виберіть вашу країну</option>
-        <option value="Росія">Росія</option>
-        <option value="Україна">Україна</option>
-        <option value="Білорусь">Білорусь</option>
-      </select>
-    </div>
-
-    <button style="font-size: 30px; margin-top: 2%; margin-bottom: 2%;" id="toadd" onclick="add()">Додати</button>
-  </div>
-
-  <!-- Футер -->
-  <div style="margin-top: 3%;">
-    <article>
-      Email: plazyu13@gmail.com
-      <br>Number: +380989307863
-      <br>Adress: Lviv, Bandery, 100
-      <footer>
-        © 2020 Lviv
-      </footer>
-    </article>
-  </div>
 </body>
 
 </html>
