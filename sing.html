@@ -10,7 +10,56 @@
 </head>
 
 <body>
-    nsdjkfnksdj
+    <h1 style="text-align: center; font-size: 50px;"> Sing In/Up</h1>
+    <form action="" class="add">
+        <img src="images/logo.jpg" alt="Error..." style="width: 20%;">
+        <div style="margin-right: 3%; text-align: right;">
+
+            <label for="username">Ім'я:</label>
+            <input class="addinput" type="text" id="username" name="username" minlength="3"><br>
+            <label for="lastname">Прізвище:</label>
+            <input class="addinput" type="text" id="lastname" name="lastname" minlength="3"><br>
+            <label for="email">Пошта:</label>
+            <input class="addinput" type="email" id="email" name="email"><br>
+
+            <label style="margin-top: 5%" for="card">Card:</label>
+            <input style="margin-top: 5%" class="addinput" type="tel" id="card" name="card"
+                placeholder="1234 4554 6748 2345" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"><br>
+
+            <label style="margin-top: 5%;" for="pwd">Пароль:</label>
+            <input style="margin-top: 5%" class="addinput" type="password" id="pwd" name="pwd" minlength="8"><br>
+        </div>
+
+        <div>
+            <label for="country">Країна:</label>
+            <select name="country" style="font-size: 25px;">
+                <option>Виберіть вашу країну</option>
+                <option value="Росія">Росія</option>
+                <option value="Україна">Україна</option>
+                <option value="Білорусь">Білорусь</option>
+                <option value="Польща">Польща</option>
+            </select>
+            <br>
+
+            <input type="radio" id="isSingedUp" name="isAuthorized" value="isAuthorized">
+            <label for="isAuthorized" style="font-size: 20px;">If you have already authorized</label><br>
+            <button style="font-size: 30px; margin-top: 2%; margin-bottom: 2%;" id="toadd"
+                onclick="sing()">Авторизуватись</button>
+        </div>
+    </form>
+
+    <a href="index.html">Головна сторінка</a>
+
+    <div style="margin-top: 6%;">
+        <article>
+            Email: plazyu13@gmail.com
+            <br>Number: +380989307863
+            <br>Adress: Lviv, Bandery, 100
+            <footer>
+                © 2020 Lviv
+            </footer>
+        </article>
+    </div>
 </body>
 
 </html>

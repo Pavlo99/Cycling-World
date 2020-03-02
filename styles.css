@@ -5,106 +5,114 @@ body {
     color: black;
     line-height: 1.6;
     background-color: gainsboro;
-  }
-  
-  /* Контейнери */
-  
-  .container {
+}
+
+/* Контейнери */
+
+.container {
     width: 100%;
     margin: auto;
     background: black;
     position: fixed;
     top: 0px;
-  }
-  
-  .grid-container {
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 10px;
-    background: white;
     padding: 10px;
-  }
-  
-  .container2 {
+}
+
+.grid-container div {
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+/* Для вибору категорії */
+
+.container2 {
     width: 100%;
     margin: auto;
     background: gray;
     margin-top: 4%;
     height: 70px;
     margin-top: 5%;
-  }
-  
-  /* Заголовочний блок*/
-  
-  .header {
+}
+
+/* Заголовочний блок*/
+
+.header {
     display: flex;
     justify-content: space-between;
-  }
-  
-  /* Вибір категорії під верхнім слотом */
-  
-  /* .topbox {
+}
+
+/* Вибір категорії під верхнім слотом */
+
+/* .topbox {
     display: flex;
     justify-content: ;
   } */
-  
-  /* Заголовок */
-  
-  .title {
+
+/* Заголовок */
+
+.title {
     font-size: 30px;
     margin-left: 10px;
     color: white;
-  }
-  
-  /* Заголовочні силки */
-  
-  .navProp {
+}
+
+/* Заголовочні силки */
+
+.navProp {
     font-size: 20px;
     color: gainsboro;
     margin: 10px;
     position: relative;
-  }
-  
-  /* Власт. для другого слота */
-  
-  .aproperty {
+}
+
+/* Власт. для другого слота */
+
+.aproperty {
     font-size: 35px;
     color: white;
     position: relative;
-  }
-  
-  /* Задання всіх тегів а без підкреслень */
-  
-  a {
+}
+
+/* Задання всіх тегів а без підкреслень */
+
+a {
     text-decoration: none;
-  }
-  
-  /* Вигляд тексту при наведені на лінкові слова*/
-  
-  a:hover {
+}
+
+/* Вигляд тексту при наведені на лінкові слова*/
+
+a:hover {
     color: wheat;
     background-color: transparent;
     text-decoration: underline;
-  }
-  
-  /* Для вибору категорії*/
-  
-  .select {
+}
+
+/* Для вибору категорії*/
+
+.select {
     margin: 0 auto;
     text-align: center;
     max-width: 1200px;
-  }
-  
-  .imagestyle {
+}
+
+.imagestyle {
     max-width: 100%;
     margin-top: 3%;
-  }
-  
-  p {
+}
+
+p {
     margin-bottom: -15px;
-  }
-  
-  #myGoods {
+}
+
+#myGoods {
     width: 100%;
     background-color: grey;
     font-size: 30px;
@@ -112,65 +120,80 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 2%;
-  }
-  
-  .fortable {
+}
+
+.fortable {
     margin-top: 2%;
     width: 100%;
-  }
-  
-  /* Поле вводу */
-  .add {
+}
+
+/* Поле вводу */
+
+.add {
     margin-top: 2%;
     font-size: 190%;
     text-align: center;
     border: 8px groove lavenderblush;
     background: white;
-    max-width: 80%;
-    margin-left: 35%;
-    margin-right: 35%;
-  }
-  
-  
-  .add div {
+    max-width: 90%;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.add div {
     margin-top: 2%;
-  }
-  
-  .addinput {
+}
+
+/* ввід інформації */
+
+.addinput {
     font-size: 110%;
-  }
-  
-  article {
+    margin-top: 2%;
+}
+
+article {
     min-height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
     text-align: center;
     background-color: #45a1ff;
     color: #fff;
-  }
-  
-  footer {
+}
+
+footer {
     margin-top: 2%;
     display: flex;
     justify-content: center;
     padding: 5px;
-  }
-  
-  td button{
+}
+
+td button {
     font-size: 25px;
-  }
-  
-  .mygoodsstyles{
+}
+
+/* стиль для div(товар і опис) в script.js */
+
+.mygoodsstyles {
     border: 1px groove black;
-  }
-  /* Стилі для grid*/
-  .imagestyle{
+    background: white;
+}
+
+/* Стилі для grid*/
+
+.imagestyle {
     margin-top: 2%;
-  }
-  .buttonstylesforgrid{
+}
+
+/* стиль для кнопки в script.js */
+
+.buttonstylesforgrid {
     margin-bottom: 2%;
+    margin-top: 2%;
     font-size: 25px;
-  }
-  .paragraphstyles{
+}
+
+/* стиль для кнопки в script.js */
+
+.paragraphstyles {
     margin: 0 auto;
-  }
+}
