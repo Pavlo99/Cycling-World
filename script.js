@@ -6,10 +6,12 @@ function buy(e) {
 }
 
 function sing() {
-    if (document.getElementById("username").value != "" && document.getElementById("lastname").value != "" && document.getElementById("email").value != "" && document.getElementById("card").value != "") {
+    if (document.getElementById("username").value != "" && document.getElementById("lastname").value != "" && document.getElementById("email").value != ""
+     && document.getElementById("card").value != "" && document.getElementById("pwd").value != "") {
         var checkRadio = document.querySelector(
             'input[name="isAuthorized"]:checked');
-          document.getElementById("myAccount").innerText(document.getElementById("username").value);  
+        alert(document.getElementById("username").value + " " + document.getElementById("lastname").value);
+        document.location = "index.html";
     }
 }
 

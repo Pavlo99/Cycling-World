@@ -10,24 +10,26 @@
 </head>
 
 <body>
+    <a style="text-align: left;" href="index.html">Головна сторінка</a>
     <h1 style="text-align: center; font-size: 50px;"> Sing In/Up</h1>
-    <form action="" class="add">
+    <form action="index.html" class="add" id="form">
         <img src="images/logo.jpg" alt="Error..." style="width: 20%;">
         <div style="margin-right: 3%; text-align: right;">
 
             <label for="username">Ім'я:</label>
-            <input class="addinput" type="text" id="username" name="username" minlength="3"><br>
+            <input class="addinput" type="text" id="username" name="username" minlength="3" required><br>
             <label for="lastname">Прізвище:</label>
-            <input class="addinput" type="text" id="lastname" name="lastname" minlength="3"><br>
+            <input class="addinput" type="text" id="lastname" name="lastname" minlength="3" required><br>
             <label for="email">Пошта:</label>
-            <input class="addinput" type="email" id="email" name="email"><br>
+            <input class="addinput" type="email" id="email" name="email" required><br>
 
             <label style="margin-top: 5%" for="card">Card:</label>
             <input style="margin-top: 5%" class="addinput" type="tel" id="card" name="card"
-                placeholder="1234 4554 6748 2345" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"><br>
+                placeholder="1234 4554 6748 2345" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required><br>
 
             <label style="margin-top: 5%;" for="pwd">Пароль:</label>
-            <input style="margin-top: 5%" class="addinput" type="password" id="pwd" name="pwd" minlength="8"><br>
+            <input style="margin-top: 5%" class="addinput" type="password" id="pwd" name="pwd" minlength="8"
+                required><br>
         </div>
 
         <div>
@@ -43,12 +45,10 @@
 
             <input type="radio" id="isSingedUp" name="isAuthorized" value="isAuthorized">
             <label for="isAuthorized" style="font-size: 20px;">If you have already authorized</label><br>
-            <button style="font-size: 30px; margin-top: 2%; margin-bottom: 2%;" id="toadd"
+            <button  style="font-size: 30px; margin-top: 2%; margin-bottom: 2%;" id="toadd"
                 onclick="sing()">Авторизуватись</button>
         </div>
     </form>
-
-    <a href="index.html">Головна сторінка</a>
 
     <div style="margin-top: 6%;">
         <article>
