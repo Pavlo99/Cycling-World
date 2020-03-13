@@ -14,14 +14,14 @@
     <!-- Верхній слот -->
     <div class="container">
         <div class="header">
-            <div>
+            <div style="width: 10%; height: 100%;">
                 <b class="title">ВелоСвіт</b>
             </div>
-            <nav style="margin-right: 35px;">
-                <a class="navProp" href="#">Розстрочка</a>
-                <a class="navProp" href="#">Ремонт</a>
-                <a class="navProp" href="#">Вибрані</a>
-                <a class="navProp" target="_top" href="sing.html" id="myAccount">Особистий кабінет</a>
+            <nav style="width: 33%; height: 100%;">
+                <a class="navProp" href="">Розстрочка</a>
+                <a class="navProp" href="">Ремонт</a>
+                <a class="navProp" href="">Корзина</a>
+                <a class="navProp" target="_parent" href="sing.html" id="myAccount">Особистий кабінет</a>
             </nav>
         </div>
     </div>
@@ -53,30 +53,33 @@
     </div>
 
     <!-- Поле вводу -->
-    <div class="add" style="align-items: right;">
-        <div>
-            <h1>Додати</h1>
-        </div>
-        <div style="margin-right: 3%; text-align: right;">
-            <div>
-                <label for="Назва">Назва:</label>
-                <input id="myselectname" class="addinput" type="text" name="name" required>
+    <div class="add">
+        <form>
+            <div class="prorertyOfDivForAddElem">
+                <h1>Додати</h1>
             </div>
-            <div>
-                <label for="Рама">Рама:</label>
-                <input class="addinput" type="text" name="type" id="type" required>
+            <div style="margin-right: 3%; text-align: right;">
+                <div>
+                    <label for="Назва">Назва:</label>
+                    <input id="myselectname" class="addinput" type="text" name="name">
+                </div>
+                <div>
+                    <label for="Рама">Рама:</label>
+                    <input class="addinput" type="text" name="type" id="type" required>
+                </div>
+                <div>
+                    <label for="Колеса">Колеса:</label>
+                    <input id="wheels" class="addinput" style="width: 70%;" type="number" name="wheels" min="0"
+                        max="29">
+                </div>
+                <div>
+                    <label for="Ціна">Ціна:</label>
+                    <input id="price" class="addinput" type="number" name="price" max="20000">
+                </div>
             </div>
-            <div>
-                <label for="Колеса">Колеса:</label>
-                <input class="addinput" type="text" name="wheels" id="wheels" required>
-            </div>
-            <div>
-                <label for="Ціна">Ціна:</label>
-                <input class="addinput" type="text" name="price" id="price" required>
-            </div>
-        </div>
+        </form>
 
-        <div>
+        <div style="max-width: 90%;">
             <label for="country">Країна:</label>
             <select name="country" style="font-size: 25px;">
                 <option>Виберіть вашу країну</option>
@@ -90,17 +93,79 @@
         <button style="font-size: 30px; margin-top: 2%; margin-bottom: 2%;" id="toadd" onclick="add()">Додати</button>
     </div>
 
-    <!-- Футер -->
-    <div style="margin-top: 3%;">
-        <article>
-            Email: plazyu13@gmail.com
-            <br>Number: +380989307863
-            <br>Adress: Lviv, Bandery, 100
-            <footer>
-                © 2020 Lviv
-            </footer>
-        </article>
-    </div>
+    <h2 style="text-align: center; margin-top: 5%;">Кількість проданих велосипедів в злежності від розміру коліс</h3>
+        <div style="text-align: center; margin-top: 5%;">
+            <canvas width="1000" height="1000" id="canvas"></canvas>
+        </div>
+
+        <div style="text-align: right;">
+            <table align="center" style="text-align: center;">
+                <tr>
+                    <th>Місяць</th>
+                    <th>К-сть</th>
+                </tr>
+                <tr>
+                    <td style="width: 30%;">Січень</td>
+                    <td style="width: 20%;">80</td>
+                </tr>
+                <tr>
+                    <td>Лютий</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Березень</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td>Квітень</td>
+                    <td>63</td>
+                </tr>
+                <tr>
+                    <td>Травень</td>
+                    <td>97</td>
+                </tr>
+                <tr>
+                    <td>Червень</td>
+                    <td>125</td>
+                </tr>
+                <tr>
+                    <td>Липень</td>
+                    <td>148</td>
+                </tr>
+                <tr>
+                    <td>Серпень</td>
+                    <td>115</td>
+                </tr>
+                <tr>
+                    <td>Вересень</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Жовтень</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Листопад</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>Грудень</td>
+                    <td>45</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Футер -->
+        <div style="margin-top: 3%;">
+            <article>
+                Email: plazyu13@gmail.com
+                <br>Number: +380989307863
+                <br>Adress: Lviv, Bandery, 100
+                <footer>
+                    © 2020 Lviv
+                </footer>
+            </article>
+        </div>
 </body>
 
 </html>

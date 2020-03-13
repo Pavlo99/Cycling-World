@@ -1,7 +1,7 @@
 body {
-    margin: 0px;
+    margin: 0%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 130%;
     color: black;
     line-height: 1.6;
     background-color: gainsboro;
@@ -11,17 +11,18 @@ body {
 
 .container {
     width: 100%;
+    height: auto;
     margin: auto;
     background: black;
     position: fixed;
-    top: 0px;
+    top: 0%;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 10px;
-    padding: 10px;
+    grid-gap: 1%;
+    padding: 0%;
 }
 
 .grid-container div {
@@ -37,8 +38,7 @@ body {
     width: 100%;
     margin: auto;
     background: gray;
-    margin-top: 4%;
-    height: 70px;
+    height: 100%;
     margin-top: 5%;
 }
 
@@ -47,6 +47,9 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    height: 100%;
+    margin: 0%;
+    font-size: 100%;
 }
 
 /* Вибір категорії під верхнім слотом */
@@ -59,26 +62,28 @@ body {
 /* Заголовок */
 
 .title {
-    font-size: 30px;
-    margin-left: 10px;
+    font-size: 150%;
+    margin-left: 1%;
     color: white;
+    width: 100%;
+    height: 100%;
 }
 
 /* Заголовочні силки */
 
 .navProp {
-    font-size: 20px;
+    font-size: 100%;
     color: gainsboro;
-    margin: 10px;
+    margin: 2%;
     position: relative;
 }
 
 /* Власт. для другого слота */
 
 .aproperty {
-    font-size: 35px;
+    font-size: 150%;
     color: white;
-    position: relative;
+    padding-right: 3%;
 }
 
 /* Задання всіх тегів а без підкреслень */
@@ -100,7 +105,7 @@ a:hover {
 .select {
     margin: 0 auto;
     text-align: center;
-    max-width: 1200px;
+    max-width: 70%;
 }
 
 .imagestyle {
@@ -115,7 +120,7 @@ p {
 #myGoods {
     width: 100%;
     background-color: grey;
-    font-size: 30px;
+    font-size: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -130,14 +135,18 @@ p {
 /* Поле вводу */
 
 .add {
-    margin-top: 2%;
-    font-size: 190%;
+    font-size: 136%;
     text-align: center;
     border: 8px groove lavenderblush;
     background: white;
+    max-width: 30%;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+
+.prorertyOfDivForAddElem {
     max-width: 90%;
-    margin-left: 33%;
-    margin-right: 33%;
+    margin-top: 3%;
 }
 
 .add div {
@@ -146,9 +155,9 @@ p {
 
 /* ввід інформації */
 
-.addinput {
+.add input {
     font-size: 110%;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 article {
@@ -164,11 +173,11 @@ footer {
     margin-top: 2%;
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 2%;
 }
 
 td button {
-    font-size: 25px;
+    font-size: 100%;
 }
 
 /* стиль для div(товар і опис) в script.js */
@@ -189,7 +198,7 @@ td button {
 .buttonstylesforgrid {
     margin-bottom: 2%;
     margin-top: 2%;
-    font-size: 25px;
+    font-size: 120%;
 }
 
 /* стиль для кнопки в script.js */
@@ -197,3 +206,13 @@ td button {
 .paragraphstyles {
     margin: 0 auto;
 }
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+input:required:valid {
+    border-color: green;
+  }
