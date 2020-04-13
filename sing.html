@@ -4,62 +4,81 @@
 <head>
     <meta charset="utf-8">
     <title>Вело Світ</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <a style="text-align: left;" href="index.html">Головна сторінка</a>
-    <h1 style="text-align: center; font-size: 80px;"> Sing In/Up</h1>
-    <form action="index.html" class="add" id="form">
-        <img src="images/logo.jpg" alt="Error..." style="width: 20%;">
-        <div style="margin-right: 3%; text-align: right;">
+<h1 style="text-align: center; font-size: 50px;"> Sing In/Up</h1>
 
-            <label for="username">Ім'я:</label>
-            <input class="addinput" type="text" id="username" name="username" minlength="3" required><br>
-            <label for="lastname">Прізвище:</label>
-            <input class="addinput" type="text" id="lastname" name="lastname" minlength="3" required><br>
-            <label for="email">Пошта:</label>
-            <input class="addinput" type="email" id="email" name="email" required><br>
+<!-- Форма -->
+<div align="center" class="container align-items-center" align="rigth" style="width: 900px; margin-left: 10%">
+    <div class="container align-items-center" align="right"
+         style="margin-right: 2%;width: 50%; margin-left: 50%; background-color: white;">
+        <form action="index.php" method="post" style="margin-right: 2%">
+            <img src="images/logo.jpg" alt="Error..." style="width: 300px; margin-right: 10%">
+            <div class="form_group">
+                <label for="username">Ім'я:</label>
+                <input class="addinput" type="text" id="username" name="username" minlength="3" style="width: 300px"
+                       required><br>
+            </div>
+            <div class="form_group">
+                <label for="lastname">Прізвище:</label>
+                <input class="addinput" type="text" id="lastname" name="lastname" minlength="3" style="width: 300px"
+                       required><br>
+            </div>
+            <div class="form_group">
+                <label for="email">Пошта:</label>
+                <input class="addinput" type="email" id="email" name="email" style="width: 300px" required><br>
+            </div>
+            <div class="form_group">
+                <label style="margin-top: 1%; width: 300px" for="card">Card:</label>
+                <input style="margin-top: 1%" class="addinput" type="tel" id="card" name="card"
+                       placeholder="1234 4554 6748 2345" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required><br>
+            </div>
+            <div class="form_group">
+                <label for="pwd">Пароль:</label>
+                <input style="width: 300px" class="addinput" type="password" id="pwd" name="pwd" minlength="8"
+                       required><br>
+            </div>
 
-            <label style="margin-top: 5%" for="card">Card:</label>
-            <input style="margin-top: 5%" class="addinput" type="tel" id="card" name="card"
-                placeholder="1234 4554 6748 2345" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required><br>
+            <div>
+                <label for="country">Країна:</label>
+                <select name="selectCountry" id="country" style="font-size: 25px; width: 300px; margin-top: 1%">
+                    <option>Виберіть вашу країну</option>
+                    <option value="Росія">Росія</option>
+                    <option value="Україна">Україна</option>
+                    <option value="Білорусь">Білорусь</option>
+                    <option value="Польща">Польща</option>
+                </select>
+                <br>
 
-            <label style="margin-top: 5%;" for="pwd">Пароль:</label>
-            <input style="margin-top: 5%" class="addinput" type="password" id="pwd" name="pwd" minlength="8"
-                required><br>
-        </div>
-
-        <div>
-            <label for="country">Країна:</label>
-            <select name="country" style="font-size: 25px;">
-                <option>Виберіть вашу країну</option>
-                <option value="Росія">Росія</option>
-                <option value="Україна">Україна</option>
-                <option value="Білорусь">Білорусь</option>
-                <option value="Польща">Польща</option>
-            </select>
-            <br>
-
-            <input type="radio" id="isSingedUp" name="isAuthorized" value="isAuthorized">
-            <label for="isAuthorized" style="font-size: 20px;">If you have already authorized</label><br>
-            <button style="font-size: 30px; margin-top: 2%; margin-bottom: 2%;" id="toadd"
-                onclick="sing()">Авторизуватись</button>
-        </div>
-    </form>
-
-    <div style="margin-top: 6%;">
-        <article>
-            Email: plazyu13@gmail.com
-            <br>Number: +380989307863
-            <br>Adress: Lviv, Bandery, 100
-            <footer>
-                © 2020 Lviv
-            </footer>
-        </article>
+                <input name="isAuthorized" type="checkbox" id="isAuthorized" value="is">
+                <label for="isAuthorized" style="font-size: 20px;">If you have already authorized</label><br>
+                <button name="button" value="Done" type="submit"
+                        style="font-size: 30px; margin-top: 2%; margin-bottom: 2%; margin-right: 20%"
+                        id="toadd">Авторизуватись
+                </button>
+            </div>
+        </form>
     </div>
+</div>
+
+<!-- Футер -->
+<div class="container-fluid" style="margin-top: 6%;">
+    <article class="article">
+        Email: plazyu13@gmail.com
+        <br>Number: +380989307863
+        <br>Adress: Lviv, Bandery, 100
+        <footer>
+            © 2020 Lviv
+        </footer>
+    </article>
+</div>
+
+
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
 
 </html>

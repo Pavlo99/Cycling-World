@@ -1,42 +1,42 @@
 function buy(e) {
-    // console.log(e.target);
-    // console.log(e.target.parentElement);
-    // console.log(e.target.parentElement.parentElement);
-    document.getElementById("mymaintable").removeChild(e.target.parentElement);
+    document.getElementById("mymaintable").removeChild(e.target.parentElement);  // Видалення товару
 }
 
 function sing() {
     if (document.getElementById("username").value != "" && document.getElementById("lastname").value != "" && document.getElementById("email").value != ""
         && document.getElementById("card").value != "" && document.getElementById("pwd").value != "") {
-        var checkRadio = document.querySelector(
-            'input[name="isAuthorized"]:checked');
         alert(document.getElementById("username").value + " " + document.getElementById("lastname").value);
-        document.location = "index.html";
+        let check = $("input[name = 'isAuthorized']:checked").val();
+        if (check) {
+            alert("Ви успішно зареєструвались");
+        }
+        else alert("Ви успішно увійшли");
+        location.href = "index.html";
     }
 }
-
+//  Додавання нового товару
 function add() {
     if (document.getElementById("myselectname").value != "" && document.getElementById("type").value != ""
         && document.getElementById("wheels").value != "" && document.getElementById("price").value != "") {
-        var isValid = document.getElementById("wheels");
+        let isValid = document.getElementById("wheels");
         if (isValid.checkValidity()) {
             if (!document.getElementById("price").validity.rangeOverflow) {
                 var myDIV = document.createElement("div");
                 myDIV.id = "mytableelem";
                 myDIV.className = "mygoodsstyles";
 
-                var picture = document.createElement("img");
+                let picture = document.createElement("img");
                 picture.src = "images/bike4.jpg";
                 picture.id = "pict";
                 picture.className = "imagestyle";
                 myDIV.appendChild(picture);
 
-                var myname1 = document.createElement("p");
+                let myname1 = document.createElement("p");
                 myname1.textContent = "Велосипед - " + document.getElementById("myselectname").value;
                 myname1.id = "name1";
                 myname1.className = "paragraphstyles";
                 myDIV.appendChild(myname1);
-                var myname2 = document.createElement("p");
+                let myname2 = document.createElement("p");
                 myname2.textContent = "Рама - " + document.getElementById("type").value;
                 myname2.id = "name2";
                 myname2.className = "paragraphstyles";
@@ -61,24 +61,30 @@ function add() {
 
                 var maintable = document.getElementById("mymaintable");
                 maintable.appendChild(myDIV);
+
+                var selected = $("select[name = 'country']").val();
+
+                if (selected != "Виберіть вашу країну")
+                    alert("Велосипед успішно додано!\n" + selected);
+                else alert("Велосипед успішно додано!");
             }
             else alert("Занадно велика ціна!")
         }
         else alert("Розмір коліс не коректний!");
     }
     else alert("Некоректний ввід даних!");
-    // document.getElementById("name1").textContent = "Велосипед - " + document.getElementById("myselectname").value;
-    // document.getElementById("name2").textContent = "Рама - " + document.getElementById("type").value;
-    // document.getElementById("name3").textContent = "Колеса - " + document.getElementById("wheels").value;
-    // document.getElementById("name4").textContent = "Ціна - " + document.getElementById("price").value;
-    // document.getElementById("name5").textContent = "Купити";
 }
 
+// Функція при загрузці сторінки (Загрузка фото та інформації про товар)
 function start() {
     for (var i = 0; i < 8; i++) {
         var myDIV = document.createElement("div");
         myDIV.id = "mytableelem";
-        myDIV.className = "mygoodsstyles";
+        myDIV.classList.add("align-items-center");
+        myDIV.classList.add("mygoodsstyles");
+        myDIV.classList.add("col-lg-12");
+        myDIV.classList.add("col-md-12z");
+        myDIV.classList.add("col-sm-12");
 
         var picture = document.createElement("img");
         picture.src = "images/bike4.jpg";
@@ -116,9 +122,32 @@ function start() {
         mybutton.style.fontSize = "120%";
         mybutton.style.marginTop = "2%";
 
+
         var maintable = document.getElementById("mymaintable");
         maintable.appendChild(myDIV);
 
+    }
+
+
+    var kv = document.getElementById("kv");
+     var ckv = kv.getContext("2d");
+     ckv.fillStyle = "white";
+     ckv.lineWidth = 6.0;
+     ckv.strokeRect(0, 0, 300, 300);
+}
+var i = 2;
+
+//  Відобразити/сховати графік
+function showElem() {
+    if (i == 1) {
+        $("#h2Text").hide(500);
+        $("#canvasDiv").hide(1500);
+        i++;
+    }
+    else {
+        $("#h2Text").show(1000);
+        $("#canvasDiv").show(1000);
+        i--;
     }
     var canvas = document.getElementById("canvas");
     var c = canvas.getContext("2d");
@@ -130,11 +159,11 @@ function start() {
     c.fillStyle = "gainsboro";
     c.fillRect(0, 0, 1000, 1000);
 
-    // рисуем данные
+    // Дані
     c.fillStyle = "blue";
-    for (var i = 0; i < data.length; i++) {
-        var dp = data[i];
-        c.fillRect(40 + i * 200, 960 - dp * 5, 100, dp * 5);
+    for (var k = 0; k < data.length; k++) {
+        var dp = data[k];
+        c.fillRect(40 + k * 200, 960 - dp * 5, 100, dp * 5);
     }
     c.fillStyle = "black";
     c.lineWidth = 2.0;
@@ -145,23 +174,17 @@ function start() {
     c.stroke();
 
     c.fillStyle = "black";
-    for (var i = 0; i < 6; i++) {
-        c.fillText((5 - i) * 20 + "", 0, i * 160 + 65);
+    for (var j = 0; j < 6; j++) {
+        c.fillText((5 - j) * 20 + "", 0, j * 160 + 65);
         c.beginPath();
-        c.moveTo(20, i * 160 + 60);
-        c.lineTo(25, i * 160 + 60);
+        c.moveTo(20, j * 160 + 60);
+        c.lineTo(25, j * 160 + 60);
         c.stroke();
     }
 
     var labels = ["28", "26", "24", "20", "16"];
-    // выводим текст
-    for (var i = 0; i < 5; i++) {
-        c.fillText(labels[i], 80 + i * 200, 980);
+    // Виводимо
+    for (var l = 0; l < 5; l++) {
+        c.fillText(labels[l], 80 + l * 200, 980);
     }
-    
-    var kv = document.getElementById("kv");
-    var ckv = kv.getContext("2d");
-    ckv.fillStyle = "white";
-    ckv.lineWidth = 6.0;
-    ckv.strokeRect(0, 0, 300, 300);
 }
