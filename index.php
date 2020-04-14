@@ -1,5 +1,9 @@
 <?php
+require_once "functions.php";
+require_once "addGood.php";
 $account = "Авторизація";
+
+$goods = getGoods(50);
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +66,18 @@ $account = "Авторизація";
     </div>
 
     <div id="mymaintable" class="grid-container table">
+        <?php
+        for ($i = 0; $i < count($goods); $i++) {
+            echo '<div id = "mytableelem" class = "align-items-center mygoodsstyles col-lg-12 col-md-12 col-sm-12">
+            <img src="images/bike4.jpg" id = "pict" style="margin-top: 2%">
+            <p id="name1" style="margin: auto">Велосипед - ' . $goods[$i]["name"] . '</p>
+            <p id="name2" style="margin: auto">Рама - ' . $goods[$i]["type"] . '</p>
+            <p id="name3" style="margin: auto">Колеса - ' . $goods[$i]["wheels"] . '</p>
+            <p id="name4" style="margin: auto">Ціна - ' . $goods[$i]["price"] . '</p>
+            <button id="name5" onclick="buy()" style="font-size: 120%; margin-top: 2%; margin-bottom: 2%">Купити</button>
+            </div>';
+        }
+        ?>
     </div>
 </div>
 
@@ -72,9 +88,9 @@ $account = "Авторизація";
 
 <div align="center" style="width: 60%">
     <div align="right">
-        <form>
+        <form action="addGood.php" method="post">
             <div class="form_group">
-                <label for="myselectname">Назва:</label>
+                <label for="name">Назва:</label>
                 <input id="myselectname" class="addinput" type="text" name="name" style="width: 300px">
             </div>
             <div class="form_group">
@@ -99,9 +115,9 @@ $account = "Авторизація";
                     <option value="Польща">Польща</option>
                 </select>
             </div>
-
-            <button type="button" style="width: 300px" class="btn btn-primary" onclick="add()">Додати</button>
+            <button type="submit" style="width: 300px" class="btn btn-primary" name="button1" id="button1">Додати</button>
         </form>
+
     </div>
 </div>
 
